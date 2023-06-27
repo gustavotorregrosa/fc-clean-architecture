@@ -3,7 +3,7 @@ import CreateProductUseCase from "./create.product.usecase";
 const input: InputCreateProductDto = {
   name: "John",
   price: 123,
-  type: 'a'
+  // type: 'a'
 };
 
 const MockRepository = () => {

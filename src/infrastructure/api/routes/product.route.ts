@@ -7,11 +7,10 @@ import ProductPresenter from "../presenters/product.presenter";
 export const productRoute = express.Router();
 
 productRoute.post("/", async (req: Request, res: Response) => {
-  console.log('foi...')
   const usecase = new CreateProductUseCase(new ProductRepository());
   try {
     const productDto = {
-      type: req.body.type,
+      // type: req.body.type,
       name: req.body.name,
       price: req.body.price,
      

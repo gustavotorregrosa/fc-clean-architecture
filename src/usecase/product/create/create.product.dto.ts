@@ -1,7 +1,7 @@
 export interface InputCreateProductDto {
   name: string;
   price: number;
-  type: 'a' | 'b'
+  // type: 'a' | 'b'
 }
 
 export interface OutputCreateProductDto {

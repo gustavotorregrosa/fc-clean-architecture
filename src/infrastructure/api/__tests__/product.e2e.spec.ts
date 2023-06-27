@@ -15,13 +15,9 @@ describe("E2E test for product", () => {
       .post("/product")
       .send({
         name: "Prd 1",
-        type: 'a',
+        // type: 'a',
         price: 123
       });
-
-
-      console.log({response})
-      console.log(response.error)
 
     expect(response.status).toBe(200);
     expect(response.body.name).toBe("Prd 1");
@@ -31,7 +27,7 @@ describe("E2E test for product", () => {
   it("should not create a product", async () => {
     const response = await request(app).post("/product").send({
       name: "Prd 2",
-      type: 'a',
+      // type: 'a',
     });
     expect(response.status).toBe(500);
   });
@@ -41,7 +37,7 @@ describe("E2E test for product", () => {
       .post("/product")
       .send({
         name: "Prd 1",
-        type: 'a',
+        // type: 'a',
         price: 123
       });
     expect(response.status).toBe(200);
@@ -49,7 +45,7 @@ describe("E2E test for product", () => {
       .post("/product")
       .send({
         name: "Prd 2",
-        type: 'a',
+        // type: 'a',
         price: 123
       });
     expect(response2.status).toBe(200);
